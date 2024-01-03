@@ -9,7 +9,10 @@ const stack =[];
 
  for(const char of s)
  {
-    
+    if(char)
+    {
+        
+    }
  }
     
 
