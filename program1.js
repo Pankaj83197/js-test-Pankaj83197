@@ -9,7 +9,7 @@ const stack =[];
 
  for(const char of s)
  {
-     if (char in mapping) {
+     if (let in mapping) {
          const topElement = stack.pop() ;
             if (mapping[char] !== topElement) {
                 return false;
