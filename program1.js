@@ -12,11 +12,9 @@ const stack =[];
      if (let in mapping) {
          const topElement = stack.pop() ;
             if (mapping[char] !== topElement) {
-                return false;
-            }
-            else
-            {
-                
+              return false;
+            } else {
+              stack.push(char);
             }
  }
 }
