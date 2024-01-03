@@ -5,7 +5,7 @@
 var isValid = function(s) {
 
 const stack =[];
- const value = { ")": "(", "}": "{", "]": "[" };
+ const mapping = { ")": "(", "}": "{", "]": "[" };
 
  for(const char of s)
  {
