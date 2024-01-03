@@ -16,6 +16,7 @@ const stack =[];
             } else {
               stack.push(char);
             }
+            return stack.length === 0;
  }
 }
     
