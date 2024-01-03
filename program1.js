@@ -14,6 +14,10 @@ const stack =[];
             if (mapping[char] !== topElement) {
                 return false;
             }
+            else
+            {
+                
+            }
  }
 }
     
