@@ -8,7 +8,7 @@ var isValid = function (s) {
 
   for (const char of s) {
     if (char in mapping) {
-      const topElement = stack.pop();
+      const topElement = stack.pop()
       if (mapping[char] !== topElement) {
         return false;
       }
