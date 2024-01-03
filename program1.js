@@ -7,7 +7,10 @@ var isValid = function(s) {
 const stack =[];
  const value = { ")": "(", "}": "{", "]": "[" };
 
- for(const )
+ for(const char of s)
+ {
+    
+ }
     
 
     
