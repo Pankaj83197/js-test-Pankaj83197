@@ -2,13 +2,14 @@
  * @param {string} s
  * @return {boolean}
  */
-var isValid = function (s) {
+var isValid = function (s) var isValid = function (s) {
   const stack = [];
   const mapping = { ")": "(", "}": "{", "]": "[" };
 
-  for (const char of s) {
-    if (char in mapping) {
-      const topElement = stack.pop()
+  for (let i = 0; i < s.length; i++) {
+    const char = s[i];
+    if (mapping.hasOwnProperty(char)) {
+      const topElement = stack.pop();
       if (mapping[char] !== topElement) {
         return false;
       }
@@ -19,6 +20,7 @@ var isValid = function (s) {
 
   return stack.length === 0;
 };
+
 
 module.exports = { isValid };
 
