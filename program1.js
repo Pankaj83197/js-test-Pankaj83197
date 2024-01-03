@@ -2,27 +2,22 @@
  * @param {string} s
  * @return {boolean}
  */
-var isValid = function(s) {
+var isValid = function (s) {
+  const stack = [];
+  const mapping = { ")": "(", "}": "{", "]": "[" };
 
-const stack = [];
- const mapping = { ")": "(", "}": "{", "]": "[" };
+  for (const char of s) {
+    if (char in mapping) {
+      const topElement = stack.pop() || "#"; // Ensure that pop() doesn't throw an error on an empty stack
+      if (mapping[char] !== topElement) {
+        return false;
+      }
+    } else {
+      stack.push(char);
+    }
+  }
 
- for(const char of s)
- {
-     if (char in mapping) {
-         const topElement = stack.pop() ;
-            if (mapping[char] !== topElement) {
-              return false;
-            } else {
-              stack.push(char);
-            }
-            return stack.length === 0;
- }
-}
-    
-
-    
-    
+  return stack.length === 0;
 };
 
 module.exports = { isValid };
